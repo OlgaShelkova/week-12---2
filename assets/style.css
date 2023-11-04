@@ -1,0 +1,28 @@
+body {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  padding: 100px;
+  color: #435334;
+  background-color: #E4E4D0;
+}
+
+#bmiForm, p {
+display: flex;
+align-items: center;
+flex-direction: column;
+margin: auto;
+width: 50%;
+}
+
+input {
+  background-color: #FAF1E4;
+}
+
+#recommendation {
+  font-size: 12px;
+  color: #9EB384;
+}
+
+p{
+  margin-top: 50px;
+}
