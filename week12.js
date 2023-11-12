@@ -24,17 +24,17 @@ bmiForm.addEventListener("submit", function(event) {// Добавляем слу
 
     if (!isNaN(weight) && !isNaN(height) && weight > 0 && height > 0) { // Проверяем, что значение веса и роста являются числами и больше нуля
     const bmi = calculateBMI(weight, height); // Вызываем функцию calculateBMI() для расчета ИМТ. Передаем значения веса и роста 
-    resultElement.textContent = + bmi; // Выводим результат на экран в элемент с id "resultElement"
-    
+    resultElement.textContent = bmi; // Выводим результат на экран в элемент с id "resultElement"
+
     if (bmi < 18.5) {
         recommendation.textContent = "Недостаточный вес. Это может указывать на недостаточное питание или другие проблемы со здоровьем.";
-    } else if (bmi >= 18.5 && bmi < 24.9) {
+    } else if (bmi < 24.9) {
         recommendation.textContent = "Нормальный вес. Ваш вес соответствует нормальным показателям.";
-    } else if (bmi >= 24.9 && bmi < 29.9) {
+    } else if (bmi < 29.9) {
         recommendation.textContent = "Избыточный вес. Рекомендуется контролировать питание и заниматься физическими упражнениями.";
-    } else if (bmi >= 29.9 && bmi < 34.9) {
+    } else if (bmi < 34.9) {
         recommendation.textContent = "Ожирение первой степени. Рекомендуется проконсультироваться с врачом и разработать план для снижения веса.";
-    } else if (bmi >= 34.9 && bmi < 39.9) {
+    } else if (bmi < 39.9) {
         recommendation.textContent = "Ожирение второй степени. Рекомендуется немедленно проконсультироваться с врачом и принять меры для снижения веса.";
     } else {
         recommendation.textContent = "Ожирение третьей степени. Рекомендуется немедленно обратиться к врачу для получения специализированной помощи.";
@@ -43,4 +43,4 @@ bmiForm.addEventListener("submit", function(event) {// Добавляем слу
       resultElement.textContent = "Пожалуйста, введите корректные значения веса и роста.";
       recommendation.textContent = "";
     }
-  });
+});
